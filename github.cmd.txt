@@ -4,4 +4,11 @@ $ git config --global user.email wissem19962009@gmail.com
 
 $ git config --global user.name "WissemRouabeh"
 
+****
 
+push 
+$ git add .
+
+$ git commit -m "footer added!"
+
+$ git push
