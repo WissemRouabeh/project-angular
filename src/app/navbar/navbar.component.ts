@@ -9,7 +9,7 @@ export class NavbarComponent implements OnInit {
   ProjectName : string ="Wissem";
   constructor() { }
 
-  ngOnInit(): void {
+    ngOnInit(): void {
 
   }
 
