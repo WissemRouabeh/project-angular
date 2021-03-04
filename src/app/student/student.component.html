@@ -1,0 +1,28 @@
+<p>student works!</p>
+<!-- <ul *ngFor="let student of students" >
+    <li> {{student.name}}</li>
+</ul> -->
+<table class="table" style="width: 90%; margin-left: auto; margin-right: auto;">
+    <thead class="thead-dark">
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Country</th>
+        <th scope="col">Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students; index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <!-- <td *ngIf="student.country==='USA'" style="color: red;">{{student.country}}</td>
+            <td *ngIf="student.country!=='USA'" style="color: green;">{{student.country}}</td> -->
+            <td [ngStyle]="{'color':student.country === 'USA' && 'red'}">{{student.country}}</td>
+            
+            <td>
+            <button type="button" class="btn btn-outline-success">Edit</button>
+            <button type="button" class="btn btn-outline-danger" style="margin-left: 5px;">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

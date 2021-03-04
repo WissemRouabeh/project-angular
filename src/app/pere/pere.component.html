@@ -1,6 +1,10 @@
-<p>pere works!</p>
+<!--p>pere works!</p>
 <app-fils></app-fils>
 
 <app-fils [ordre]="tab[0]" [villeNaissance]="sud"></app-fils>
 <app-fils [ordre]="tab[1]" [villeNaissance]="nord"></app-fils>
-<app-fils [ordre]="tab[2]" [villeNaissance]="capitale"></app-fils> 
+<app-fils [ordre]="tab[2]" [villeNaissance]="capitale"></app-fils--> 
+
+<h3>Moyenne de mes enfants {{moyenne}}</h3>
+    
+<app-fils *ngFor="let enfant of enfants" [nom]="enfant" (message) = "computeAVG($event)"></app-fils>

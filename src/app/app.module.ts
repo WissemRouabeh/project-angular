@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { PereComponent } from './pere/pere.component';
 import { FilsComponent } from './pere/fils/fils.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FilsComponent } from './pere/fils/fils.component';
     NavbarComponent,
     FooterComponent,
     PereComponent,
-    FilsComponent
+    FilsComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
