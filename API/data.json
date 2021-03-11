@@ -1,0 +1,22 @@
+{
+    "students":[
+        {
+            "id":1,
+            "name":"Madilyn Pacocha",
+            "age":"20",
+            "address":"094 Aois Plains"
+        },
+        {
+            "id":2,
+            "name":"Peter Doe",
+            "age":"22",
+            "address":"094 Morris Plains"
+        },
+        {
+            "id":3,
+            "name":"Adams Ert",
+            "age":"22",
+            "address":"094 Paris"
+        }
+    ]
+}
