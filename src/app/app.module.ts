@@ -11,6 +11,7 @@ import { FilsComponent } from './pere/fils/fils.component';
 import { StudentComponent } from './student/student.component';
 import { AddComponent } from './add/add.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EditStudentComponent } from './edit-student/edit-student.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     FilsComponent,
     StudentComponent,
     AddComponent,
+    EditStudentComponent,
   ],
   imports: [
     BrowserModule,

@@ -33,6 +33,8 @@ export class AddComponent implements OnInit {
     const data = this.add.value;
     this.apiservice.createStudent(data).subscribe((response) => {
       console.log(response);
+      this.apiservice.getListStudents();
+      alert('+1 student');
     });
   }
 }

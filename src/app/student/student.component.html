@@ -20,8 +20,8 @@
             <td [ngStyle]="{'color':student.country === 'USA' && 'red'}">{{student.country}}</td>
             
             <td>
-            <button type="button" class="btn btn-outline-success">Edit</button>
-            <button type="button" class="btn btn-outline-danger" style="margin-left: 5px;">Delete</button>
+            <button type="button" class="btn btn-outline-success" (click)="update(student.id)">Edit</button>
+            <button type="button" class="btn btn-outline-danger" style="margin-left: 5px;" (click)="(delete(student.id))">Delete</button>
             </td>
         </tr>
     </tbody>

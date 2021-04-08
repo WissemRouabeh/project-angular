@@ -1,0 +1,37 @@
+<form [formGroup]="edit">
+    <div class="form-group row">
+        <label for="inputEmail" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="InputEmail3" placeholder="Name" formControlName="name">
+        <small class="text-danger" *ngIf="edit.get('name')?.hasError('required')">
+            This field is required.
+        </small>
+        <small class="text-danger" *ngIf="edit.get('name')?.hasError('minlength')">
+            The minimum length for this field is 3 characters.
+        </small>
+        <small class="text-danger" *ngIf="edit.get('name')?.errors && edit.get('name')?.hasError('maxlength')">
+            The maximum length for this field is 30 characters.
+        </small>
+        </div>
+    </div>
+    
+    <div class="form-group row">
+        <label for="inputName" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="InputEmail3" placeholder="Email" formControlName="email" >
+        </div>
+    </div>
+    
+    <div class="form-group row">
+        <label for="inputCountry" class="col-sm-2 col-form-label">Country</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="InputEmail3" placeholder="Country" formControlName="country">
+        </div>
+    </div>
+    
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary" [disabled]="edit.invalid" (click)="update()">Edit Student</button>
+        </div>
+    </div>
+        </form>

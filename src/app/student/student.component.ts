@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiserviceService } from '../apiservice.service';
 
 @Component({
   selector: 'app-student',
@@ -6,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student.component.css'],
 })
 export class StudentComponent implements OnInit {
-  students = [
+  studentss = [
     {
       name: 'Will Smith',
       email: 'email@qsd.com',
-      country: 'USA',
+      country: 'USAs',
     },
 
     {
@@ -43,7 +45,24 @@ export class StudentComponent implements OnInit {
       country: 'USA',
     },
   ];
-  constructor() {}
 
-  ngOnInit(): void {}
+  students: any;
+
+  constructor(public apiservice: ApiserviceService, public router: Router) {
+    this.students = [];
+  }
+
+  ngOnInit(): void {
+    this.apiservice.getListStudents().subscribe((response) => {
+      this.students = response;
+    });
+  }
+  delete(id: any) {
+    this.apiservice.deleteStudent(id).subscribe((response) => {
+      console.log(response);
+    });
+  }
+  update(id: any) {
+    this.router.navigateByUrl('/edit/' + id);
+  }
 }

@@ -8,7 +8,9 @@ import { Student } from './student';
 })
 export class ApiserviceService {
   base_path = 'http://localhost:3000/students';
+
   constructor(private http: HttpClient) {}
+
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -29,5 +31,11 @@ export class ApiserviceService {
 
   getListStudents(): Observable<Student> {
     return this.http.get<Student>(this.base_path);
+  }
+  deleteStudent(id: any): Observable<Student> {
+    return this.http.delete<Student>(this.base_path + '/' + id);
+  }
+  updateStudent(id: any, data: any): Observable<Student> {
+    return this.http.put<Student>(this.base_path + '/' + id, data);
   }
 }
